@@ -22,13 +22,7 @@ jobs:
 
       - name: Build EXE
         run: |
-          pyinstaller ^
-            --noconsole ^
-            --onefile ^
-            --name MacroStudio ^
-            --hidden-import macro_app.player ^
-            --hidden-import macro_app.macro_engine ^
-            macro_app/main.py
+          pyinstaller --noconsole --onefile --name MacroStudio --hidden-import macro_app.player --hidden-import macro_app.macro_engine macro_app/main.py
 
       - name: Upload EXE
         uses: actions/upload-artifact@v4
