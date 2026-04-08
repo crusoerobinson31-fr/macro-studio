@@ -2,8 +2,8 @@ from PySide6.QtWidgets import (
     QMainWindow, QPushButton, QTextEdit, QWidget, QVBoxLayout
 )
 
-from macro_app.macro_engine import Macro
-from macro_app.player import MacroPlayer
+from .player import MacroPlayer
+from .macro_engine import Macro
 
 class MainWindow(QMainWindow):
     def __init__(self):
