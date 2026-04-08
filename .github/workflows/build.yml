@@ -22,7 +22,7 @@ jobs:
 
       - name: Build EXE
         run: |
-            pyinstaller --clean MacroStudio.spec
+            pyinstaller --clean --onefile --noconsole --name MacroStudio macro_app/main.py
            
       - name: Upload EXE
         uses: actions/upload-artifact@v4
