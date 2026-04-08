@@ -1,5 +1,5 @@
 import time
-from macro_app.macro_engine import Macro
+from .macro_engine import Macro
 
 class MacroPlayer:
     def __init__(self, logger=print):
