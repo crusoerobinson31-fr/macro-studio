@@ -1,4 +1,5 @@
 # -*- mode: python ; coding: utf-8 -*-
+
 from PyInstaller.utils.hooks import collect_submodules
 
 hiddenimports = collect_submodules("macro_app")
@@ -7,9 +8,12 @@ a = Analysis(
     ["macro_app/main.py"],
     pathex=["."],
     hiddenimports=hiddenimports,
+    binaries=[],
+    datas=[],
 )
 
 pyz = PYZ(a.pure)
+
 exe = EXE(
     pyz,
     a.scripts,
